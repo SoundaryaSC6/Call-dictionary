@@ -106,7 +106,6 @@ image: {
 
   first: {
     marginTop: hp('1%'),
-    marginBottom: hp('1%'),
     width: wp('60%'),
     height: hp('5%'),
     flexWrap: 'wrap', 
@@ -119,21 +118,18 @@ image: {
   },
   Email: {
     marginTop: hp('1%'),
-    marginBottom: hp('1%'),
     width: wp('60%'),
     height: hp('5%'),
     flexWrap: 'wrap', 
   },
   Name: {
     marginTop: hp('1%'),
-    marginBottom: hp('1%'),
     width: wp('60%'),
     height: hp('5%'),
     flexWrap: 'wrap', 
   },
   Company: {
     marginTop: hp('1%'),
-    marginBottom: hp('1%'),
     width: wp('60%'),
     height: hp('5%'),
     flexWrap: 'wrap', 
