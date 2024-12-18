@@ -50,10 +50,15 @@ const DetailsScreen = () => {
           </Text>
           <View style={styles.line}></View>
           <Text style={styles.AddressHeading}>Address:</Text>
-            <Text style={styles.addressLine}>
-                {item.address?.street || 'Not available'}, 
-                {item.address?.city || 'Not available'}, 
-                {item.address?.zipcode || 'NA'}
+
+          <Text style={styles.Street}>
+            <Text style={styles.label}>Street:</Text> {item.address?.street || 'Not available'} 
+          </Text>
+          <Text style={styles.City}>
+            <Text style={styles.label}>City: </Text>{item.address?.city || 'Not available'}
+          </Text>
+          <Text style={styles.Zipcode}>
+            <Text style={styles.label}>Zipcode: </Text>{item.address?.zipcode || 'NA'}
           </Text>
           <View style={styles.line}></View>
           <Text style={styles.website}>
@@ -78,9 +83,9 @@ const styles = StyleSheet.create({
 
   contentContainer: {
     flexDirection: 'row',
-    marginTop: hp('2%'),
+    marginTop: hp('1%'),
     width: wp('90%'), 
-    height: hp('60%'), 
+    height: hp('65%'), 
     backgroundColor: '#D4D4D4',
     justifyContent: 'flex-start',
     marginLeft: wp('1%'),
@@ -105,7 +110,7 @@ image: {
   },
 
   first: {
-    marginTop: hp('1%'),
+    marginTop: hp('2%'),
     width: wp('60%'),
     height: hp('5%'),
     flexWrap: 'wrap', 
@@ -137,24 +142,39 @@ image: {
   AddressHeading: {
     fontWeight: 'bold',
     marginTop: hp('1%'),
-    marginBottom: hp('1%'),
     width: wp('60%'),
     height: hp('5%'),
     flexWrap: 'wrap', 
   },
-  
-  addressLine: {
-    marginBottom: hp('1%'),
+   
+  Street: {
+    marginTop: hp('1%'),
     width: wp('60%'),
     height: hp('5%'),
-    flexShrink: 0,
     flexWrap: 'wrap', 
-  },  
+    fontStyle: 'normal',
+  },
+
+  City:  {
+    marginTop: hp('1%'),
+    width: wp('60%'),
+    height: hp('5%'),
+    flexWrap: 'wrap', 
+    fontStyle: 'normal',
+  },
+
+  Zipcode: {
+    marginTop: hp('1%'),
+    width: wp('60%'),
+    height: hp('5%'),
+    flexWrap: 'wrap', 
+  },
 
   label: {
     fontWeight: 'bold',
     color: 'black',
   },
+
   website: {
     fontSize: RFValue(14),
     color: '#00bfff',
